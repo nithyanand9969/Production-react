@@ -21,6 +21,14 @@ app.use(morgan('dev'))
 //routes
 app.use('/api/v1/auth',require("./routes/userRoutes"));
 
+app.get('/',(req,res)=>{
+    res.status(200).send({
+        "success":true,
+        "message":"node runing"
+        
+    })
+});
+
 //Port Number
 
 const PORT = process.env.PORT ||  8080;
